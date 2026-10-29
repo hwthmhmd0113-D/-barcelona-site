@@ -2,9 +2,9 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#07152f">
-<title>Barça Zone | عالم برشلونة</title>
+<title>BARÇA ZONE | عالم برشلونة</title>
 
 <style>
 :root {
@@ -12,179 +12,205 @@
   --red: #a50044;
   --bg: #07152f;
   --card: #102344;
-  --text: #ffffff;
-  --muted: #b9c8df;
   --gold: #ffcc33;
+  --muted: #b9c8df;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
   font-family: Arial, Tahoma, sans-serif;
   background: var(--bg);
-  color: var(--text);
+  color: white;
   line-height: 1.8;
 }
 
 header {
   text-align: center;
-  padding: 32px 15px;
+  padding: 30px 12px;
   background: linear-gradient(120deg, #004d98, #a50044);
   border-bottom: 3px solid var(--gold);
 }
 
 header h1 {
+  font-size: clamp(28px, 7vw, 45px);
   margin: 0;
-  font-size: clamp(28px, 6vw, 44px);
 }
 
-header p {
-  margin: 8px 0 0;
-}
+header p { margin: 5px 0; }
 
 nav {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 10px;
-  padding: 14px 8px;
+  gap: 8px;
+  padding: 12px 6px;
   background: #0b1d3a;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 5;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  padding: 7px 12px;
-  border-radius: 8px;
   background: #17345e;
-  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 13px;
 }
 
-nav a:hover {
-  background: var(--red);
-}
+nav a:hover { background: var(--red); }
 
 main {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: auto;
-  padding: 18px 12px;
+  padding: 14px;
 }
 
 section {
-  margin-bottom: 28px;
-  scroll-margin-top: 90px;
+  margin: 24px 0;
+  scroll-margin-top: 80px;
 }
 
 h2 {
   border-right: 5px solid var(--gold);
   padding-right: 10px;
-  font-size: 23px;
+  font-size: 22px;
 }
+
+h3 { color: var(--gold); }
 
 .card {
   background: var(--card);
-  padding: 16px;
-  border-radius: 14px;
-  margin: 12px 0;
   border: 1px solid #29466f;
-  overflow-wrap: anywhere;
-}
-
-.match {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
-  gap: 8px;
-  text-align: center;
-}
-
-.team {
-  font-weight: bold;
-}
-
-.vs {
-  color: var(--gold);
-  font-size: 13px;
-}
-
-.meta {
-  color: var(--muted);
-  font-size: 13px;
-  margin-top: 8px;
-}
-
-.badge {
-  display: inline-block;
-  padding: 2px 9px;
-  border-radius: 20px;
-  background: #213e68;
-  font-size: 12px;
-  margin-bottom: 8px;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  background: var(--card);
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-th, td {
-  padding: 11px 8px;
-  text-align: center;
-  border-bottom: 1px solid #29466f;
-}
-
-th {
-  background: linear-gradient(90deg, var(--blue), var(--red));
-}
-
-td:first-child, th:first-child {
-  text-align: right;
+  border-radius: 13px;
+  padding: 14px;
+  margin: 12px 0;
 }
 
 .note {
   background: #292b36;
   color: #ffe6a0;
-  padding: 12px;
   border-radius: 10px;
+  padding: 12px;
   font-size: 13px;
 }
 
-footer {
+.muted {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+a { color: var(--gold); }
+
+.btn {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #17345e;
+  color: white;
+  text-decoration: none;
+  margin: 5px 0;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  border-radius: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 530px;
+  background: var(--card);
+}
+
+th, td {
   text-align: center;
-  padding: 28px 12px;
-  margin-top: 30px;
+  padding: 9px 7px;
+  border-bottom: 1px solid #29466f;
+  white-space: nowrap;
+}
+
+th {
+  background: linear-gradient(90deg, var(--blue), var(--red));
+  position: sticky;
+  top: 0;
+}
+
+td:first-child, th:first-child { text-align: right; }
+
+.club {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.crest {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.position {
+  color: var(--gold);
+  font-weight: bold;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+}
+
+.stat {
+  background: var(--card);
+  border: 1px solid #29466f;
+  border-radius: 12px;
+  padding: 14px;
+  text-align: center;
+}
+
+.stat strong {
+  display: block;
+  font-size: 25px;
+  color: var(--gold);
+}
+
+.player {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  background: var(--card);
+  border: 1px solid #29466f;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 8px 0;
+}
+
+.player small { color: var(--muted); }
+
+footer {
+  margin-top: 35px;
+  padding: 25px 12px;
+  text-align: center;
   background: linear-gradient(120deg, #0645a5, #a50044);
   border-top: 3px solid var(--gold);
 }
 
-footer strong {
-  color: var(--gold);
-}
+footer strong { color: var(--gold); }
 
-footer .visca {
+.visca {
   font-size: 22px;
   font-weight: bold;
-  margin-top: 5px;
 }
 
 @media (max-width: 480px) {
-  th, td {
-    padding: 9px 5px;
-    font-size: 12px;
-  }
-
-  .card {
-    padding: 12px 8px;
-  }
+  main { padding: 10px; }
+  th, td { padding: 8px 5px; font-size: 12px; }
 }
 </style>
 </head>
@@ -193,132 +219,239 @@ footer .visca {
 
 <header>
   <h1>🔵🔴 BARÇA ZONE</h1>
-  <p>كل ما يخص نادي برشلونة — المباريات والإحصائيات</p>
+  <p>عالم برشلونة — المباريات والإحصائيات وترتيب الدوري</p>
+  <p>Visca Barça! ❤️💙</p>
 </header>
 
 <nav>
-  <a href="#next">المباريات القادمة</a>
-  <a href="#laliga">الدوري الإسباني</a>
+  <a href="#home">الرئيسية</a>
+  <a href="#matches">المباريات</a>
+  <a href="#standings">ترتيب الدوري</a>
+  <a href="#laliga">إحصائيات الدوري</a>
   <a href="#ucl">دوري الأبطال</a>
-  <a href="#stats">إحصائيات اللاعبين</a>
+  <a href="#sources">المصادر</a>
 </nav>
 
 <main>
 
-<section id="next">
-  <h2>📅 المباريات القادمة</h2>
+<section id="home">
+  <h2>🏟️ أهلاً بك في BARÇA ZONE</h2>
+
+  <div class="stat-grid">
+    <div class="stat">
+      <strong>FCB</strong>
+      <span>نادي برشلونة</span>
+    </div>
+    <div class="stat">
+      <strong>2026/27</strong>
+      <span>الموسم الحالي</span>
+    </div>
+    <div class="stat">
+      <strong>🔵🔴</strong>
+      <span>Més que un club</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>🏆 وضع برشلونة في الدوري</h3>
+    <p>المركز الأول — 27 نقطة — بعد 10 مباريات.</p>
+    <p class="muted">
+      لقطة بيانات تم التحقق منها بتاريخ 29 أكتوبر 2026.
+      راجع المصادر الرسمية للحصول على آخر تحديث.
+    </p>
+  </div>
+</section>
+
+<section id="matches">
+  <h2>📅 المباريات القادمة والنتائج</h2>
+
+  <div class="card">
+    <p>للحصول على المواعيد والنتائج المؤكدة، استخدم الجداول الرسمية.</p>
+
+    <a class="btn"
+       href="https://www.fcbarcelona.com/en/football/first-team/schedule"
+       target="_blank" rel="noopener">
+       مباريات برشلونة الرسمية
+    </a>
+    <br>
+
+    <a class="btn"
+       href="https://www.uefa.com/uefachampionsleague/clubs/50080/matches/"
+       target="_blank" rel="noopener">
+       مباريات برشلونة في دوري الأبطال
+    </a>
+  </div>
 
   <div class="note">
-    جدول المباريات يحتاج إلى التحديث عند تغيير المواعيد.
-    راجع الموقع الرسمي لبرشلونة للتأكد من التاريخ والوقت.
+    لا تُعرض هنا مواعيد غير مؤكدة؛ تحقق من المصادر الرسمية قبل المباراة.
+  </div>
+</section>
+
+<section id="standings">
+  <h2>🇪🇸 ترتيب الدوري الإسباني 2026–2027</h2>
+
+  <div class="note">
+    الترتيب التالي لقطة من جدول LaLiga المتاح عند إعداد هذا الإصدار.
+    قد يتغير بعد المباريات، لذلك راجع المصدر الرسمي للحصول على الترتيب الأحدث.
   </div>
 
-  <div class="card">
-    <span class="badge">الدوري الإسباني</span>
-    <div class="match">
-      <div class="team">🔵🔴 برشلونة</div>
-      <div class="vs">ضد</div>
-      <div class="team">ديبورتيفو ألافيس</div>
-    </div>
-    <div class="meta">31 أكتوبر 2026 — الموعد بحسب الجدول الرسمي المعلن</div>
+  <p>
+    <a class="btn"
+       href="https://www.laliga.com/en-US/laliga-easports/standing"
+       target="_blank" rel="noopener">
+       فتح الترتيب الرسمي
+    </a>
+  </p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>المركز</th>
+          <th>الفريق</th>
+          <th>لعب</th>
+          <th>فاز</th>
+          <th>تعادل</th>
+          <th>خسر</th>
+          <th>له</th>
+          <th>عليه</th>
+          <th>الفارق</th>
+          <th>النقاط</th>
+        </tr>
+      </thead>
+      <tbody id="standingsBody"></tbody>
+    </table>
+  </div>
+</section>
+
+<section id="laliga">
+  <h2>⚽ أهداف وأسيستات لاعبي برشلونة في الدوري</h2>
+
+  <div class="note">
+    الإحصائيات التالية هي لقطة من صفحة إحصائيات LaLiga الرسمية.
+    الأهداف والأسيستات في هذه القائمة تخص الدوري فقط، ولا تشمل البطولات الأخرى.
   </div>
 
-  <div class="card">
-    <span class="badge">دوري أبطال أوروبا</span>
-    <div class="match">
-      <div class="team">🔵🔴 برشلونة</div>
-      <div class="vs">ضد</div>
-      <div class="team">أستون فيلا</div>
-    </div>
-    <div class="meta">3 نوفمبر 2026 — الموعد بحسب الجدول الرسمي المعلن</div>
+  <h3>🥅 أهداف اللاعبين</h3>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>اللاعب</th>
+          <th>الأهداف</th>
+          <th>المباريات</th>
+        </tr>
+      </thead>
+      <tbody id="goalsBody"></tbody>
+    </table>
   </div>
 
-  <div class="card">
-    <span class="badge">الدوري الإسباني</span>
-    <div class="match">
-      <div class="team">أتلتيكو مدريد</div>
-      <div class="vs">ضد</div>
-      <div class="team">🔵🔴 برشلونة</div>
-    </div>
-    <div class="meta">8 نوفمبر 2026 — الموعد بحسب الجدول الرسمي المعلن</div>
+  <h3>🎯 الأسيستات</h3>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>اللاعب</th>
+          <th>الأسيستات</th>
+          <th>المباريات</th>
+        </tr>
+      </thead>
+      <tbody id="assistsBody"></tbody>
+    </table>
   </div>
 
-  <p class="meta">
-    المصدر الرسمي:
-    <a href="https://www.fcbarcelona.com/en/football/first-team/schedule"
-       target="_blank" rel="noopener" style="color:#ffcc33">
-      جدول مباريات برشلونة
+  <p>
+    <a class="btn"
+       href="https://www.laliga.com/en-GB/stats/laliga-easports/scorers/team/fc-barcelona"
+       target="_blank" rel="noopener">
+       المصدر الرسمي لأهداف برشلونة
+    </a>
+  </p>
+
+  <p>
+    <a class="btn"
+       href="https://www.laliga.com/en-GB/stats/laliga-easports/assists/team/fc-barcelona"
+       target="_blank" rel="noopener">
+       المصدر الرسمي لأسيستات برشلونة
     </a>
   </p>
 </section>
 
-<section id="laliga">
-  <h2>🇪🇸 الدوري الإسباني</h2>
-
-  <div class="card">
-    <p>هنا تظهر مباريات برشلونة في الدوري الإسباني.</p>
-    <p class="meta">
-      لم تتم إضافة نتائج غير مؤكدة. استخدم الرابط الرسمي لمراجعة النتائج.
-    </p>
-    <a href="https://www.laliga.com/clubes/fc-barcelona/proximos-partidos"
-       target="_blank" rel="noopener" style="color:#ffcc33">
-      عرض مباريات برشلونة في موقع LaLiga
-    </a>
-  </div>
-</section>
-
 <section id="ucl">
-  <h2>🏆 دوري أبطال أوروبا</h2>
+  <h2>🌍 دوري أبطال أوروبا</h2>
 
   <div class="card">
-    <p>تابع مباريات برشلونة الأوروبية ومواعيدها.</p>
-    <a href="https://www.uefa.com/uefachampionsleague/clubs/50080/matches/"
-       target="_blank" rel="noopener" style="color:#ffcc33">
-      جدول برشلونة على موقع UEFA الرسمي
+    <h3>إحصائيات الفريق</h3>
+    <div class="stat-grid">
+      <div class="stat">
+        <strong>11</strong>
+        <span>هدفاً للفريق</span>
+      </div>
+      <div class="stat">
+        <strong>9</strong>
+        <span>أسيستات للفريق</span>
+      </div>
+    </div>
+
+    <p class="muted">
+      إحصائيات الفريق الإجمالية بحسب صفحة UEFA المتاحة عند إعداد الكود،
+      وليست أرقاماً مضمونة أن تبقى كما هي بعد المباريات التالية.
+    </p>
+
+    <a class="btn"
+       href="https://www.uefa.com/uefachampionsleague/clubs/50080/statistics/"
+       target="_blank" rel="noopener">
+       جميع إحصائيات برشلونة على UEFA
+    </a>
+  </div>
+
+  <div class="card">
+    <h3>🎯 أسيستات لامين يامال</h3>
+    <p>4 أسيستات في دوري الأبطال بحسب تقرير UEFA المنشور بتاريخ 21 أكتوبر 2026.</p>
+    <p class="muted">
+      هذه لقطة تاريخية من التقرير؛ راجع صفحة UEFA للتأكد من الرقم الحالي.
+    </p>
+
+    <a class="btn"
+       href="https://www.uefa.com/uefachampionsleague/news/02a9-218f8e669a0a-debba167a199-1000--champions-league-top-scorers-ermedin-demirovic-ferran-torres/"
+       target="_blank" rel="noopener">
+       تقرير UEFA عن الهدافين والأسيستات
     </a>
   </div>
 </section>
 
-<section id="stats">
-  <h2>📊 إحصائيات لاعبي برشلونة</h2>
+<section id="sources">
+  <h2>🔎 مصادر البيانات</h2>
 
-  <div class="note">
-    هذه الخانات جاهزة لإضافة الإحصائيات الحقيقية.
-    لا تعرض أرقاماً حالية لأنها لم تُربط بعد بقاعدة بيانات موثوقة.
-    أدخل أهداف وأسيستات كل بطولة بشكل منفصل، ولا تخلط مباريات الكؤوس
-    أو المباريات الودية مع الدوري الإسباني ودوري الأبطال.
-  </div>
+  <div class="card">
+    <p>للحصول على المعلومات الأحدث، استخدم المصادر التالية:</p>
 
-  <h3>🇪🇸 الدوري الإسباني</h3>
-  <div style="overflow-x:auto">
-    <table>
-      <thead>
-        <tr>
-          <th>اللاعب</th>
-          <th>الأهداف</th>
-          <th>الأسيستات</th>
-        </tr>
-      </thead>
-      <tbody id="laligaStats">
-        <tr><td colspan="3">لم تُحمّل الإحصائيات بعد</td></tr>
-      </tbody>
-    </table>
-  </div>
+    <p>
+      <a href="https://www.laliga.com/en-US/laliga-easports/standing"
+         target="_blank" rel="noopener">1. ترتيب الدوري الإسباني الرسمي</a>
+    </p>
 
-  <h3>🏆 دوري أبطال أوروبا</h3>
-  <div style="overflow-x:auto">
-    <table>
-      <thead>
-        <tr>
-          <th>اللاعب</th>
-          <th>الأهداف</th>
-          <th>الأسيستات</th>
-        </tr>
-      </thead>
-      <tbody id="uclStats">
-        <tr><td colspan="3">لم تُحمّل الإحصائيات بعد</td></tr>
-      </tbody>
-    </table>
+    <p>
+      <a href="https://www.laliga.com/en-GB/stats/laliga-easports/scorers/team/fc-barcelona"
+         target="_blank" rel="noopener">2. هدافو برشلونة في الدوري</a>
+    </p>
+
+    <p>
+      <a href="https://www.laliga.com/en-GB/stats/laliga-easports/assists/team/fc-barcelona"
+         target="_blank" rel="noopener">3. أسيستات برشلونة في الدوري</a>
+    </p>
+
+    <p>
+      <a href="https://www.uefa.com/uefachampionsleague/clubs/50080/statistics/"
+         target="_blank" rel="noopener">4. إحصائيات برشلونة في دوري الأبطال</a>
+    </p>
+
+    <p>
+      <a href="https://www.fcbarcelona.com/"
+         target="_blank" rel="noopener">5. الموقع الرسمي لنادي برشلونة</a>
+    </p>
   </div>
 </section>
 
@@ -327,8 +460,138 @@ footer .visca {
 <footer>
   <div>تم التطوير بواسطة <strong>حوته</strong></div>
   <div class="visca">🔵🔴 Visca Barça! 🔴🔵</div>
-  <div class="meta">Força Barça ❤️💙</div>
+  <div class="muted">Més que un club ❤️💙</div>
 </footer>
 
+<script>
+/*
+  بيانات الترتيب: لقطة من جدول LaLiga عند إعداد هذا الكود.
+  الشعارات مأخوذة من خدمة شعارات الفرق football-data.org.
+  إذا لم يظهر شعار فريق، سيظهر اختصار اسمه بدلاً منه.
+*/
+
+const standings = [
+  ["FC Barcelona",27,10,9,0,1,40,11,29,81],
+  ["Atlético de Madrid",25,10,8,1,1,20,8,12,78],
+  ["Real Madrid",24,10,8,0,2,25,10,15,86],
+  ["Real Betis",20,10,6,2,2,16,14,2,90],
+  ["Real Sociedad",19,10,6,1,3,19,18,1,92],
+  ["Sevilla FC",17,10,5,2,3,16,16,0,559],
+  ["Deportivo Alavés",12,10,3,3,4,14,11,3,263],
+  ["Athletic Club",12,9,3,3,3,12,9,3,77],
+  ["Celta",12,10,2,6,2,10,7,3,558],
+  ["Villarreal CF",12,10,3,3,4,15,14,1,94],
+  ["RC Deportivo",11,10,2,5,3,13,13,0,560],
+  ["CA Osasuna",11,10,3,2,5,10,20,-10,79],
+  ["Racing Santander",11,10,3,2,5,15,26,-11,87],
+  ["Levante UD",10,10,2,4,4,16,19,-3,88],
+  ["Elche CF",10,10,2,4,4,14,17,-3,285],
+  ["Rayo Vallecano",9,9,2,3,4,12,20,-8,87],
+  ["Getafe CF",9,10,2,3,5,5,15,-10,82],
+  ["Espanyol",8,10,2,2,6,12,14,-2,80],
+  ["Valencia CF",6,10,1,3,6,7,17,-10,95],
+  ["Málaga CF",5,10,0,5,5,7,19,-12,84]
+];
+
+const crestOverrides = {
+  "Racing Santander": "https://crests.football-data.org/87.png",
+  "Levante UD": "https://crests.football-data.org/88.png",
+  "Rayo Vallecano": "https://crests.football-data.org/87.png"
+};
+
+function crestUrl(team, id) {
+  return crestOverrides[team] || `https://crests.football-data.org/${id}.png`;
+}
+
+const standingsBody = document.getElementById("standingsBody");
+
+standings.forEach((t, i) => {
+  const [name, pts, played, wins, draws, losses, gf, ga, gd, id] = t;
+  const tr = document.createElement("tr");
+
+  const logo = document.createElement("img");
+  logo.className = "crest";
+  logo.src = crestUrl(name, id);
+  logo.alt = "";
+  logo.onerror = () => {
+    logo.style.display = "none";
+  };
+
+  const club = document.createElement("div");
+  club.className = "club";
+  club.appendChild(logo);
+
+  const nameSpan = document.createElement("span");
+  nameSpan.textContent = name;
+  club.appendChild(nameSpan);
+
+  const pos = document.createElement("td");
+  pos.className = "position";
+  pos.textContent = i + 1;
+
+  const teamCell = document.createElement("td");
+  teamCell.appendChild(club);
+
+  [played,wins,draws,losses,gf,ga,gd,pts].forEach(v => {
+    const td = document.createElement("td");
+    td.textContent = v;
+    tr.appendChild(td);
+  });
+
+  tr.prepend(teamCell);
+  tr.prepend(pos);
+  standingsBody.appendChild(tr);
+});
+
+// الأهداف في الدوري: لقطة من صفحة إحصائيات LaLiga الرسمية.
+const goals = [
+  ["Raphinha",13,9],
+  ["Lamine Yamal",8,10],
+  ["Fermín López",4,9],
+  ["Gabriel Jesus",3,6],
+  ["Karim Adeyemi",2,10],
+  ["João Cancelo",1,7],
+  ["Dani Olmo",1,9],
+  ["Jules Koundé",1,6],
+  ["Anthony Gordon",1,9],
+  ["Eric García",1,8],
+  ["Pedri",1,10],
+  ["Xavi Espart",1,8],
+  ["Rodrigo",1,9]
+];
+
+// الأسيستات في الدوري: لقطة من صفحة إحصائيات LaLiga الرسمية.
+const assists = [
+  ["Lamine Yamal",6,10],
+  ["Anthony Gordon",4,9],
+  ["Dani Olmo",3,9],
+  ["Raphinha",3,9],
+  ["Fermín López",3,9],
+  ["Karim Adeyemi",2,10],
+  ["Pedri",2,10],
+  ["Pau Cubarsí",2,7],
+  ["Xavi Espart",2,8],
+  ["Marc Bernal",2,8],
+  ["Andreas Christensen",1,6],
+  ["Jules Koundé",1,6]
+];
+
+function fillTable(id, rows) {
+  const tbody = document.getElementById(id);
+  rows.forEach(row => {
+    const tr = document.createElement("tr");
+    row.forEach(value => {
+      const td = document.createElement("td");
+      td.textContent = value;
+      tr.appendChild(td);
+    });
+    tbody.appendChild(tr);
+  });
+}
+
+fillTable("goalsBody", goals);
+fillTable("assistsBody", assists);
+</script>
+
 </body>
-</html>
+  </html>
